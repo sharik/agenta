@@ -740,7 +740,7 @@ def parse_to_agenta_span_dto(
         span_dto.data = _unmarshal_attributes(span_dto.data)
 
         if "outputs" in span_dto.data:
-            if "__default__" in span_dto.data["outputs"]:
+            if "__default__" in (span_dto.data.get("outputs") or {}):
                 span_dto.data["outputs"] = span_dto.data["outputs"]["__default__"]
 
     # METRICS
