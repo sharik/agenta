@@ -1,4 +1,4 @@
-FROM agentaai/templates_v2:main
+FROM sharikmaster/agenta:latest
 
 WORKDIR /app
 
